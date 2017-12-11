@@ -29,7 +29,6 @@ Caution: the joint analysis framework on which metaUSAT or metaMANOVA depends do
 
 4. metaUSAT does not require independence of samples. When samples are related (e.g., in family-based GWAS), metaUSAT can use the summary statistics from EMMAX (or other univariate mixed model framework) to appropriately test for genetic associations.
 
-5. metaUSAT does not assume homogeneity of trait effects across studies. However, if the studies are nearly independent
-and the trait effects are believed to be homogeneous across studies, you may use meta-analyzed summary statistics for each trait (e.g., Z-statistic output from METAL) to perform joint meta-analysis of multiple traits. This may increase the power of the test by reducing the degrees of freedom of the test.
+5. metaUSAT does not assume homogeneity of trait effects across studies, hence powerful in detecting association if trait effects are heterogeneous across studies. However, if the studies are nearly independent and the trait effects are believed to be homogeneous across studies, you may use meta-analyzed summary statistics for each trait (e.g., Z-statistic output from METAL) to perform joint meta-analysis of multiple traits. This may increase the power of the test by reducing the degrees of freedom of the test.
 
 6. If you receive an error message like `the integral is probably divergent`, try reducing the absolute tolerance parameter `AbsTol`.

@@ -20,16 +20,16 @@ Version 1.17 - December 11, 2017
 
 
 ### Notes
-1. The method metaUSAT and its software is designed to test association of multiple traits (categorical and/or continuous) from a single study, or a single trait from multiple studies, or multiple traits from multiple studies. It only requires summary statistics for testing joint association of traits for a single genetic variant. 
+1. The method metaUSAT and its software is designed to test association of multiple traits (categorical and/or continuous) from a single study, or a single trait from multiple studies, or multiple traits from multiple studies. It only requires individual trait summary statistics for testing joint association of traits with a single genetic variant. 
 
 2. metaUSAT uses the summary statistics for a given genetic variant and the estimated correlation matrix to test association. If one or more studies have overlapping samples/individuals (which may or may not be known), the estimated correlation matrix reflects this overlap, and metaUSAT can appropriately account for that.
 Caution: the joint analysis framework on which metaUSAT or metaMANOVA depends does not work well when the overlap between studies is large.
 
 3. Since metaUSAT uses only summary statistics, it is assumed that all necessary covariate adjustments were performed when the individual trait summary statistics were obtained.
 
-4. metaUSAT does not require the independence of samples. When samples are related (e.g., in family-based GWAS), metaUSAT can use the summary statistics from EMMAX (or other univariate mixed model framework) to appropriately test for genetic associations.
+4. metaUSAT does not require independence of samples. When samples are related (e.g., in family-based GWAS), metaUSAT can use the summary statistics from EMMAX (or other univariate mixed model framework) to appropriately test for genetic associations.
 
 5. metaUSAT does not assume homogeneity of trait effects across studies. However, if the studies are nearly independent
-and the trait effects are believed to be homogeneous across studies, you may use metaanalyzed summary statistics for each trait (e.g., Z-statistic output from METAL) to perform joint meta-analysis of multiple traits. This may increase the power of the test by reducing the degrees of freedom of the test.
+and the trait effects are believed to be homogeneous across studies, you may use meta-analyzed summary statistics for each trait (e.g., Z-statistic output from METAL) to perform joint meta-analysis of multiple traits. This may increase the power of the test by reducing the degrees of freedom of the test.
 
 6. If you receive an error message like `the integral is probably divergent`, try reducing the absolute tolerance parameter `AbsTol`.

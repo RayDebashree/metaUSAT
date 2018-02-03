@@ -32,3 +32,8 @@ Caution: the joint analysis framework on which metaUSAT or metaMANOVA depends do
 5. metaUSAT does not assume homogeneity of trait effects across studies, hence powerful in detecting association if trait effects are heterogeneous across studies. However, if the studies are nearly independent and the trait effects are believed to be homogeneous across studies, you may use meta-analyzed summary statistics for each trait (e.g., Z-statistic output from [METAL](https://genome.sph.umich.edu/wiki/METAL_Documentation)) to perform joint meta-analysis of multiple traits. This may increase the power of the test by reducing the degrees of freedom of the test.
 
 6. If you receive an error message like `the integral is probably divergent`, try reducing the absolute tolerance parameter `AbsTol`.
+
+7. A user kindly pointed out a warning message displayed when `weights` are provided with version 1.17:<br/>
+`In if (weights != 1) { :`<br/>
+&nbsp;&nbsp;`the condition has length > 1 and only the first element will be used`<br/>
+You can ignore this message (as long as the first weight is not 1, which would mean your sample size is 1); the weights you provided will be appropriately used inside the function. If the sample sizes are different across traits/studies, provide square root of sample sizes as `weights`, else the default is `weights=1`.

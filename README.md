@@ -2,7 +2,7 @@
 ### Description
 metaUSAT is a data-adaptive statistical approach for testing genetic associations of multiple traits from single/multiple studies using univariate GWAS summary statistics. This multivariate meta-analysis method can appropriately account for overlapping samples (if any) and can potentially test binary and/or continuous traits. The R function `metausat` implements this association test. For details of this statistical method, please refer/cite:
 
-Ray, D., Boehnke, M. "[Methods for meta-analysis of multiple traits using GWAS summary statistics](http://onlinelibrary.wiley.com/doi/10.1002/gepi.22105/full)". *Genetic Epidemiology*, DOI 10.1002/gepi.22105, 2017.
+Ray, D., Boehnke, M. "[Methods for meta-analysis of multiple traits using GWAS summary statistics](http://onlinelibrary.wiley.com/doi/10.1002/gepi.22105/full)". *Genetic Epidemiology*, 42(2):134-145, 2018.
 
 "The power of multivariate association test depends on a complex interplay of the number of truly associated traits, their correlation structure and the directions of the signals. The underlying association scenario changes from one genetic variant to another, and is not known *a priori* for any real dataset. There is no uniformly most powerful multivariate test, and a particular choice of association test may not be powerful enough to detect true signals. metaUSAT, being data-adaptive in nature, is less affected by the true (unknown) association scenario, and proves to be a robust yet
 computationally efficient choice for investigators."

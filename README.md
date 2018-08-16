@@ -21,9 +21,10 @@ Version 1.17 - December 11, 2017
 
 ### Notes
 1. The method metaUSAT and its software is designed to test association of multiple traits (categorical and/or continuous) from a single study, or a single trait from multiple studies, or multiple traits from multiple studies. It only requires individual trait summary statistics for testing joint association of traits with a single genetic variant. 
+    * Caution: metaUSAT is a single-variant association test; so not expected to work well for rare variants (i.e., genetic variants with very low allele-frequencies).
 
 2. metaUSAT uses the summary statistics for a given genetic variant and the estimated correlation matrix to test association. If one or more studies have overlapping samples/individuals (which may or may not be known), the estimated correlation matrix reflects this overlap, and metaUSAT can appropriately account for that.
-Caution: the joint analysis framework on which metaUSAT or metaMANOVA depends does not work well when the overlap between studies is large.
+    * Caution: the joint analysis framework on which metaUSAT or metaMANOVA depends does not work well when the overlap between studies is large.
 
 3. Since metaUSAT uses only summary statistics, it is assumed that all necessary covariate adjustments were performed when the individual trait summary statistics were obtained.
 

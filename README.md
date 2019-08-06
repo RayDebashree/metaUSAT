@@ -14,6 +14,13 @@ Overlapping samples; PheWAS; Pleiotropy; Score test; Summary statistics
 R (>= 3.0.1), CompQuadForm, minqa, psych, survey
 
 
+### How to Install within R
+```{r}
+require(devtools)
+source_url("https://github.com/RayDebashree/metaUSAT/blob/master/metaUSAT_v1.17.R?raw=TRUE")
+```
+
+
 ### Changes
 Version 1.17 - December 11, 2017
 > First public release of the software.

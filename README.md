@@ -19,6 +19,7 @@ R (>= 3.0.1), CompQuadForm, minqa, psych, survey
 require(devtools)
 source_url("https://github.com/RayDebashree/metaUSAT/blob/master/metaUSAT_v1.17.R?raw=TRUE")
 ```
+It is recommended to download/copy the stand-alone R program in this repository, save it in your local directory of choice and `source()` it from your local directory. When a new version of the software is available, older versions may be removed from this repository, and the above `devtools::source_url()` technique may not work.
 
 
 ### Changes

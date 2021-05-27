@@ -38,7 +38,7 @@ Version 1.17 - December 11, 2017
 3. Since metaUSAT uses only summary statistics, it is assumed that all necessary covariate adjustments were performed when the individual trait summary statistics were obtained.
    * Caution: Harmonize the same effect allele across the two studies/traits so that Z-scores from the two datasets can be jointly analyzed appropriately using metaUSAT. This is a fairly standard procedure in meta-analysis or other procedure using summary data from two or more studies/traits.
 
-4. metaUSAT does not require independence of samples. When samples are related (e.g., in family-based GWAS), metaUSAT can use the summary statistics from [EMMAX](https://genome.sph.umich.edu/wiki/EMMAX) (or other univariate mixed model framework) to appropriately test for genetic associations.
+4. metaUSAT does not require independence of samples. When samples are related (e.g., in family-based GWAS), metaUSAT can use the summary statistics from [EMMAX](https://genome.sph.umich.edu/wiki/EMMAX) (or other univariate mixed model framework or an appropriate family-based association test) to appropriately test for genetic associations.
 
 5. metaUSAT does not assume homogeneity of trait effects across studies, hence powerful in detecting association if trait effects are heterogeneous across studies. However, if the studies are nearly independent and the trait effects are believed to be homogeneous across studies, you may use meta-analyzed summary statistics for each trait (e.g., Z-statistic output from [METAL](https://genome.sph.umich.edu/wiki/METAL_Documentation)) to perform joint meta-analysis of multiple traits. This may increase the power of the test by reducing the degrees of freedom of the test.
 

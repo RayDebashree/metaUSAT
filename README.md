@@ -30,11 +30,13 @@ Version 1.17 - December 11, 2017
 ### Notes
 1. The method metaUSAT and its software is designed to test association of multiple traits (categorical and/or continuous) from a single study, or a single trait from multiple studies, or multiple traits from multiple studies. It only requires individual trait summary statistics for testing joint association of traits with a single genetic variant. 
     * Caution: metaUSAT is a single-variant association test; so not expected to work well for rare variants (i.e., genetic variants with very low allele-frequencies).
+    * Caution: metaUSAT does “multivariate meta-analysis”, which is not exactly the same as what we understand about meta-analysis for a single trait. For meta-analysis of a single trait, we have summary statistics from multiple studies and we combine these summary statistics into a single summary measure for the trait. The multivariate meta-analysis implemented by metaUSAT does not combine the summary statistics for the two (or more) traits into a single trait; it merely analyzes them jointly. 
 
 2. metaUSAT uses the summary statistics for a given genetic variant and the estimated correlation matrix to test association. If one or more studies have overlapping samples/individuals (which may or may not be known), the estimated correlation matrix reflects this overlap, and metaUSAT can appropriately account for that.
     * Caution: the joint analysis framework on which metaUSAT or metaMANOVA depends does not work well when the overlap between studies is large.
 
 3. Since metaUSAT uses only summary statistics, it is assumed that all necessary covariate adjustments were performed when the individual trait summary statistics were obtained.
+   * Caution: Harmonize the same effect allele across the two studies/traits so that Z-scores from the two datasets can be jointly analyzed appropriately using metaUSAT. This is a fairly standard procedure in meta-analysis or other procedure using summary data from two or more studies/traits.
 
 4. metaUSAT does not require independence of samples. When samples are related (e.g., in family-based GWAS), metaUSAT can use the summary statistics from [EMMAX](https://genome.sph.umich.edu/wiki/EMMAX) (or other univariate mixed model framework) to appropriately test for genetic associations.
 
